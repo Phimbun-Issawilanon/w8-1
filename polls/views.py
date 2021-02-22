@@ -6,6 +6,8 @@ from django.utils import timezone
 
 from .models import Choice, Question, Vote
 
+def homepage(request):
+    return render(request, 'polls/homepage.html')
 
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
